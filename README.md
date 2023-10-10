@@ -44,3 +44,23 @@ To run the service locally:
 ```sh
 npm --prefix app/ run dev
 ```
+
+## CURL
+
+We can query the API using curl:
+
+```sh
+curl http://localhost:8080/getPatient?patientID=506889996
+```
+This returns the master data of a person with CPR=506889996
+
+If a valid CPR number is entered, but is not in the CSV file the following error is thrown:
+
+```sh
+curl http://localhost:8080/getPatient?patientID=1234567890
+```
+```sh
+{"message":"Patient with following cpr number does not exist"}
+```
+
+
