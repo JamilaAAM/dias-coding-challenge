@@ -52,7 +52,36 @@ We can query the API using curl:
 ```sh
 curl http://localhost:8080/getPatient?patientID=506889996
 ```
-This returns the master data of a person with CPR=506889996
+This returns the master data of a person with CPR=506889996:
+
+```sh
+{
+"resourceType":"Patient",
+"identifier":
+  {
+  "id":"506889996",
+  "system":"1.2.208.176.1.2"
+  },
+"active":true,
+"name":
+  {
+  "family":"Mosebrygersen",
+  "given":["Sille","June","Test"]
+  },
+"gender":"female",
+"birthDate":"1988-05-06",
+"deceasedBoolean":false,
+"address":
+  {
+  "line":"Testgrusgraven 3, 3.tv",
+  "city":"Hillerød",
+  "postalCode":"3400",
+  "country":"Danmark"
+  },
+"guardian":"",
+"comment":"Datter af May June Moberg & Schwendlund Mosebryggersen"
+}
+```
 
 If a valid CPR number is entered, but is not in the CSV file the following error is thrown:
 
