@@ -26,8 +26,6 @@ The service is configured with the following env variable(s):
 | ---------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | `PORT`                 | 8080                        | Listening port      
 
-NOTE: remember to run npm install to install the necessary packages to run the service
-
 ## Docker
 
 Run the following commands to run the web service with Docker:
